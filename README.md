@@ -22,6 +22,8 @@ flask --app main.py --debug run
 
 ## Teste de conversão
 
+Teste com valor original aleatorio:
+
 ```
-curl -v http://127.0.0erter?valor_orig=10.0
+curl http://127.0.0.1:er?valor_orig=$(echo $RANDOM)
 ```
