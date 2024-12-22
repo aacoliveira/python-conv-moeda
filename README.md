@@ -22,7 +22,11 @@ flask --app main.py --debug run
 
 ## Teste de conversão
 
-Teste com valor original aleatorio:
+### Fluxo
+
+![curl](sources/diagram/fluxo.png)
+
+### Teste com valor aleatorio:
 
 ```
 curl http://127.0.0.1:5000/converter?valor_orig=$(echo $RANDOM)
