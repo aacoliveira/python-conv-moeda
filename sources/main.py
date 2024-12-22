@@ -6,12 +6,15 @@ app = Flask(__name__)
 G_FATOR_REAL_DOLAR = 6.25
 G_FATOR_REAL_EURO = 6.38
 
+def get_conversao(valor_orig, fator):
+    return round(float(valor_orig) / fator, 3)
+
 @app.route('/converter', methods=['GET'])
 def converter():
     
     valor_orig = request.args.get("valor_orig")
-    valor_euro = round(float(valor_orig) / G_FATOR_REAL_EURO, 3)
-    valor_dolar = round(float(valor_orig) / G_FATOR_REAL_DOLAR ,3)
+    valor_euro = get_conversao(valor_orig, G_FATOR_REAL_EURO)
+    valor_dolar = get_conversao(valor_orig, G_FATOR_REAL_DOLAR)
 
     return '''
                 <h1> Valor em Real :: {} </h1>,
