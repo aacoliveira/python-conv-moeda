@@ -11,7 +11,7 @@ python3 -m venv p_env && source p_env/bin/activate
 ## Instalação das dependências
 
 ```
-pip3 install -r requirements.txt
+pip3 install -r sources/requirements.txt
 ```
 
 ## Flask Run
