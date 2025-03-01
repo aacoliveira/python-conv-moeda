@@ -17,14 +17,14 @@ pip3 install -r sources/requirements.txt
 ## Flask Run
 
 ```
-flask --app main.py --debug run
+flask --app sources/main.py --debug run
 ```
 
 ## Teste de conversão
 
 ### Fluxo
 
-![curl](sources/diagram/fluxo.png)
+![curl](diagram/fluxo.png)
 
 ### Teste com valor aleatorio:
 

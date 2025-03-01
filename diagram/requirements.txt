@@ -1,0 +1,2 @@
+graphviz==0.20.3
+compat-fork-diagrams==0.24.1 
