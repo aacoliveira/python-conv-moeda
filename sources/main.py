@@ -30,14 +30,15 @@ http_requests_total = Counter(
 
 @app.route('/metrics')
 def metrics():
-    """ Exposes application metrics in a Prometheus-compatible format. """
+    """Expõe as métricas em um formato compatível com o Prometheus. """
     return generate_latest(registry), 200, {'Content-Type': CONTENT_TYPE_LATEST}
 
 def get_conversao(valor_orig, fator):
     return round(float(valor_orig) / fator, 3)
 
 @app.route('/converter', methods=['GET'])
-def converter():    
+def converter():
+    """Converte o valor recebido para EURO e US DOLAR com base no fator correspondente à moeda"""
     http_requests_total.labels(status=200, path=request.path, method=request.method).inc()
     valor_orig = request.args.get("valor_orig")
     valor_euro = get_conversao(valor_orig, G_FATOR_REAL_EURO)
