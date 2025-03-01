@@ -56,6 +56,12 @@ docker container stop py-conv-moeda
 curl http://localhost:5000/converter?valor_orig=$(echo $RANDOM)
 ```
 
-### 3.2 Fluxo
+### 3.2 - Exibiindo as métricas
+
+```
+curl http://localhost:5000/metrics
+```
+
+## 4 - Fluxo
 
 ![curl](diagram/fluxo.png)
