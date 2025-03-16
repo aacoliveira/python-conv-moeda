@@ -39,7 +39,7 @@ docker container run -d --rm -p 5000:5000 --name py-conv-moeda python-conv-moeda
 ### 2.3 - Logs do container criado
 
 ```bash
-docker container stop py-conv-moeda
+docker container logs py-conv-moeda
 ```
 
 ### 2.4 - Remoção do container criado
