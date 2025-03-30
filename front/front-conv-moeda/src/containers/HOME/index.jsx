@@ -10,6 +10,21 @@ function App() {
     setRandomNumber(random);
   };
 
+  const convertValue = async () => {
+    if (randomNumber !== null) {
+      try {
+        const response = await fetch(`http://localhost:5000/converter?valor_orig=${randomNumber}`);
+        const data = await response.json();
+        console.log('Resultado da conversão:', data);
+        // Você pode adicionar lógica adicional aqui para exibir os dados da conversão.
+      } catch (error) {
+        console.error('Erro ao realizar a conversão:', error);
+      }
+    } else {
+      alert('Por favor, gere um número aleatório antes de converter.');
+    }
+  };
+
   return (
     <div style={{ padding: '20px', fontFamily: 'Arial, sans-serif' }}>
       <h1>Front - Conversão de Moedas</h1>
@@ -31,6 +46,9 @@ function App() {
       <br />
       <button onClick={generateRandomNumber} style={{ padding: '10px 20px', cursor: 'pointer' }}>
         Gerar número aleatório
+      </button>
+      <button onClick={convertValue} style={{ padding: '10px 20px', marginLeft: '10px', cursor: 'pointer' }}>
+        Converter
       </button>
       <br />
       {randomNumber !== null && (
