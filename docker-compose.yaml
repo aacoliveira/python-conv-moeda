@@ -17,7 +17,7 @@ services:
 
   front:
     build:
-      context: ./front/front-conv-moeda
+      context: ./frontend/front-conv-moeda
     container_name: front
     restart: always  
     ports:
