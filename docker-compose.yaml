@@ -1,0 +1,38 @@
+services:
+  py-conv:
+    build:
+      context: .
+    container_name: py-conv-moeda
+    restart: always  
+    ports:
+      - 5000:5000
+    deploy:      
+      resources:
+        limits:
+          cpus: 0.5
+          memory: 100m
+    networks:
+      # - n_metrics_py_conv
+      - n_py_conv
+
+  front:
+    build:
+      context: ./front/front-conv-moeda
+    container_name: front
+    restart: always  
+    ports:
+      - 8080:3000
+    deploy:      
+      resources:
+        limits:
+          cpus: 0.5
+          memory: 100m
+    networks:
+      # - n_metrics_py_conv
+      - n_py_conv
+
+networks:
+  n_py_conv:
+    name: n_py_conv
+  # # n_metrics_py_conv:
+  # #   name: n_metrics_py_conv
