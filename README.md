@@ -18,8 +18,16 @@ docker compose up
 
 ### 3.1 - Teste com valor aleatorio:
 
+Retorno em json:
+
 ```
-curl http://localhost:5000/converter?valor_orig=$(echo $RANDOM)
+curl http://localhost:5000/converter-json?valor_orig=$(echo $RANDOM)
+```
+
+Retorno em html:
+
+```
+curl http://localhost:5000/converter-html?valor_orig=$(echo $RANDOM)
 ```
 
 ### 3.2 - Exibindo as métricas
