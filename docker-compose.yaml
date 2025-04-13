@@ -1,7 +1,7 @@
 services:
   py-conv:
     build:
-      context: .
+      context: ./backend/
     container_name: py-conv-moeda
     restart: always  
     ports:
