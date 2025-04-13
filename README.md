@@ -6,9 +6,14 @@ Projeto que converte real para outras moedas.
 
 ![curl](diagram/fluxo.png)
 
-## 2 - Run
+## 2 - Execução
 
-Execute o projeto com o comando:
+## 2.1 - Instale o Docker e Compose de acordo com a sua plataforma
+
+- https://docs.docker.com/engine/install/
+- https://docs.docker.com/compose/install/linux/
+
+## 2.2 - Execute o projeto com o comando:
 
 ```bash
 docker compose up
