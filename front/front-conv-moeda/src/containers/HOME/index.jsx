@@ -14,7 +14,7 @@ function App() {
   const convertValue = async () => {
     if (randomNumber !== null) {
       try {
-        const response = await fetch(`http://localhost:5000/converter?valor_orig=${randomNumber}`);
+        const response = await fetch(`http://localhost:5000/converter-json?valor_orig=${randomNumber}`);
         const result = await response.text(); // Obtém o texto puro do retorno do endpoint
         setConversionResult(result);
       } catch (error) {
