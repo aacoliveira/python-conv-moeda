@@ -11,9 +11,9 @@ node -v  # Verifique a versão do Node.js
 npm -v   # Verifique a versão do npm
 ```
 
-## Vite
+## Criação do projeto
 
-### Criação do projeto:
+### Vite
 
 ```bash
 npm create vite@latest
@@ -23,13 +23,13 @@ npm create vite@latest
 > Seleciona React 
 > Javascript
 
-### Acessa o diretório:
+Acessa o diretório:
 
 ```bash
 cd front-conv-moeda
 ```
 
-### Instalação dos pacotes
+Instalação dos pacotes
 
 ```bash
 npm i
@@ -44,5 +44,5 @@ docker build -t front-conv-moeda .
 ## Execução
 
 ```bash
-docker run --rm -p 8080:3000 front-conv-moeda
+docker run --rm -d -p 8080:3000 front-conv-moeda
 ```
