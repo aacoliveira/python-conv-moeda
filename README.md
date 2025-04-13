@@ -21,7 +21,9 @@ docker compose up
 
 ## 3 - Teste de conversão
 
-### 3.1 - Teste com valor aleatorio:
+### 3.1 - Acesse o endereço [http://localhost:8080/](http://localhost:8080/)
+
+### 3.2 - Teste com Curl
 
 Retorno em json:
 
