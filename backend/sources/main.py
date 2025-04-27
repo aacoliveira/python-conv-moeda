@@ -49,9 +49,19 @@ def converter_html():
     valor_dolar = get_conversao(valor_orig, G_FATOR_REAL_DOLAR)
 
     return '''
-                <h1> Valor em Real :: {} </h1>,
-                <h1> Valor em Euro :: {} </h1>,
-                <h1> Valor em Dólar : {} </h1>,
+            <!DOCTYPE html>
+            <html lang="pt-BR">
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Valores Monetários</title>
+            </head>
+            <body>
+                <h1>Valor em Real :: {}</h1>
+                <h1>Valor em Euro :: {}</h1>
+                <h1>Valor em Dólar : {}</h1>
+            </body>
+            </html>
             '''.format(valor_orig, valor_euro, valor_dolar)
 
 @app.route('/converter-json', methods=['GET'])
