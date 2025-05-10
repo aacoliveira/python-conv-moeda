@@ -30,7 +30,8 @@
 	// "shutdownAction": "none",
 
 	// Uncomment the next line to run commands after the container is created.
-	// "postCreateCommand": "cat /etc/os-release",
+	//,"postCreateCommand": "pip3 install --user -r backend/sources/requirements.txt;cd front-conv-moeda && npm -i"
+    ,"postCreateCommand": "cd ../frontend/front-conv-moeda && npm -i"
 
 	// Configure tool-specific properties.
 	// "customizations": {},
